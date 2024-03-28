@@ -1,0 +1,48 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal, and External CSS Example</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS */
+        h1 {
+            color: blue;
+        }
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Styling Example</h1>
+    </header>
+    <section>
+        <h2>Using Inline, Internal, and External CSS</h2>
+        <p>This paragraph has inline styling.</p>
+        <p class="internal">This paragraph has internal styling.</p>
+        <p>This paragraph has external styling.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Styling Example</p>
+    </footer>
+</body>
+</html>
+
+<style>
+/* External CSS */
+section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+p {
+    color: green;
+}
+</style>
