@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Online Hotel Room Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Online Hotel Room Booking</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Rooms</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="hero">
+      <h2>Welcome to our hotel!</h2>
+      <p>Book your room now and enjoy a comfortable stay with us.</p>
+      <a href="#" class="cta">Book Now</a>
+    </section>
+    <section id="rooms">
+      <h2>Rooms</h2>
+      <ul id="room-list"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2021 Online Hotel Room Booking</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #4CAF50;
+  color: white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+  background-color: #3e8e41;
+}
+
+#hero {
+  background-image: url("hotel.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+}
+
+#hero .cta {
+  background-color: white;
+  color: #4CAF50;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+#rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+#room-list li {
+  width: 31%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#room-list li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#room-list li p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#room-list li .cta {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+#room-list li .
+</style>

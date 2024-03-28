@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Veterinary Care</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Online Veterinary Care</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#complaints">Complaints</a></li>
+        <li><a href="#cure">Cure</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#payment">Payment</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="register">
+        <h2>Register</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Register</button>
+        </form>
+      </section>
+      <section id="login">
+        <h2>Login</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Login</button>
+        </form>
+      </section>
+      <section id="complaints">
+        <h2>Complaints</h2>
+        <form>
+          <label for="animal">Animal:</label>
+          <input type="text" id="animal" name="animal">
+          <label for="symptoms">Symptoms:</label>
+          <textarea id="symptoms" name="symptoms"></textarea>
+          <label for="media">Media:</label>
+          <input type="file" id="media" name="media">
+          <button type="submit">Submit Complaint</button>
+        </form>
+        <h3>My Complaint Status</h3>
+        <ul id="complaint-status">
+          <!-- Complaints will be displayed here -->
+        </ul>
+      </section>
+      <section id="cure">
+  <h2>Cure</h2>
+  <div id="cure-content"></div>
+</section>
+<section id="news">
+  <h2>News</h2>
+  <div id="news-content"></div>
+</section>
+<section id="doctors">
+  <h2>Doctors</h2>
+  <div id="doctors-content"></div>
+</section>
+<section id="payment">
+  <h2>Payment</h2>
+  <form>
+    <label for="payment-method">Payment Method:</label>
+    <select id="payment-method">
+      <option value="bank-transfer">Bank Transfer</option>
+      <option value="easy-paisa">Easy Paisa</option>
+    </select>
+    <label for="bank-details">Bank Details:</label>
+    <input type="text" id="bank-details" name="bank-details">
+    <button type="submit">Make Payment</button>
+  </form>
+</section>
+<section id="profile">
+  <h2>Profile</h2>
+  <ul>
+    <li><strong>Name:</strong> [User's Name]</li>
+    <li><strong>Email:</strong> [User's Email]</li>
+    <li><strong>Subscribed Doctors:</strong> [List of Subscribed Doctors]</li>
+    <li><strong>Payment Details:</strong> [Payment Details]</li>
+    <li><strong>Feedback:</strong> [Feedback Details]</li>
+  </ul>
+</section>
+  </main>
+</body>
+</html>

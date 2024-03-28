@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Online Veterinary Care System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Online Veterinary Care System</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">User</a></li>
+      <li><a href="#">Doctor</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="hero">
+      <h2>Get expert veterinary care for your animals online</h2>
+      <p>Register now to start posting complaints and tracking their progress</p>
+      <a href="#" class="cta">Register</a>
+    </section>
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>
+          <h3>Post Complaint</h3>
+          <p>Send a request to the doctor with your animal's symptoms in video, audio, image, or text form</p>
+        </li>
+        <li>
+          <h3>View Complaint Status</h3>
+          <p>Track the status of your complaints to see when they have been resolved</p>
+        </li>
+        <li>
+          <h3>View Vetcure Details</h3>
+          <p>Easily view information about the available services and treatments for your animals</p>
+        </li>
+        <li>
+          <h3>View News</h3>
+          <p>Stay up-to-date with the latest news and announcements from the online veterinary care system</p>
+        </li>
+        <li>
+          <h3>View Doctor</h3>
+          <p>Access a directory of doctors and their specialties to find the best care for your animals</p>
+        </li>
+        <li>
+          <h3>View Report</h3>
+          <p>Easily view and download reports about the health of your animals</p>
+        </li>
+        <li>
+          <h3>Post Feedback</h3>
+          <p>Provide feedback on your experience with the online veterinary care system</p>
+        </li>
+        <li>
+          <h3>Make Payment</h3>
+          <p>Securely make payments for subscriptions and treatments using a variety of payment gateways</p>
+        </li>
+        <li>
+          <h3>My Profile</h3>
+          <p>View and manage your account information, including payment and subscription details</p>
+        </li>
+        <li>
+          <h3>View User Details</h3>
+          <p>Access information about users and their animals to better diagnose and treat their symptoms</p>
+        </li>
+        <li>
+          <h3>View Payment Details</h3>
+          <p>Easily view and manage payments</p>
+          const express = require('express');
+
+<script>
+const router = express.Router();
+
+// Import the User model
+const User = require('../models/user');
+
+// Route for registering a new user
+router.post('/register', (req, res) => {
+  // Create a new user
+  const user = new User({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password
+  });
+
+  // Save the user to the database
+  user.save((err, user) => {
+    if (err) {
+      return res.status(500).json({
+        message: 'Error saving user'
+      });
+    }
+
+    // Return a success message
+    res.json({
+      message: 'User created successfully!'
+    });
+  });
+});
+
+// Route for logging in a user
+router.post('/login', (req, res) => {
+  // Find the user by email
+  User.findOne({
+    email: req.body.email
+  }, (err, user) => {
+    if (err) {
+      return res.status(500).json({
+        message: 'Error finding user'
+      });
+    }
+
+    // Check if the user exists
+    if (!user) {
+      return res.status(401).json({
+        message: 'Invalid email or password'
+      });
+    }
+
+    // Check if the password is correct
+    if (user.password !== req.body.password) {
+      return res.status(401).json({
+        message: 'Invalid email or password'
+      });
+    }
+
+    // Return a success message
+    res.json({
+      message: 'User logged in successfully!',
+      user: user
+    });
+  });
+});
+
+// Export the router
+module.exports = router;
+</script>
+<script type="text/javascript">
+  const express = require('express');
+const userRoutes = require('./routes/user-routes');
+
+// Initialize the app
+const app = express();
+
+// Use the user routes
+app.use('/api/users', userRoutes);
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server started on port 3000');
+});
+</script>

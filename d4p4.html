@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="box-container">
+  <div class="box box-relative">
+    <p>Relative positioning: Box is positioned relative to its parent container.</p>
+  </div>
+  <div class="box box-absolute">
+    <p>Absolute positioning: Box is positioned relative to its nearest positioned ancestor.</p>
+  </div>
+</div>
+
+</body>
+</html>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+}
+
+.box-container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.box {
+  width: 200px;
+  padding: 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.box-relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background-color: #f9f9f9;
+}
+
+.box-absolute {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f9f9f9;
+}
+</style>

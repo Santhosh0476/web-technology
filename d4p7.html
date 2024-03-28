@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registered</title>
+</head>
+<body>
+  <h1>Student Registered</h1>
+  <p>
+    Name:
+    <strong><%= request.getAttribute("firstName") %> <%= request.getAttribute("lastName") %></strong>
+  </p>
+  <p>
+    Email:
+    <strong><%= request.getAttribute("email") %></strong>
+  </p>
+  <p>
+    Major:
+    <strong><%= request.getAttribute("major") %></strong>
+  </p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Application Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Job Application Website</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#vacancies">Vacancies</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="register">
+        <h2>Register</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Register</button>
+        </form>
+      </section>
+      <section id="login">
+        <h2>Login</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Login</button>
+        </form>
+      </section>
+      <section id="vacancies">
+        <h2>Vacancies</h2>
+        <form>
+          <label for="search-query">Search:</label>
+          <input type="text" id="search-query" name="search-query">
+          <button type="submit">Search</button>
+        </form>
+        <ul id="vacancy-list">
+          <!-- Vacancies will be displayed here -->
+        </ul>
+      </section>
+      <section id="profile">
+        <h2>Profile</h2>
+        <ul>
+          <li><strong>Name:</strong> [User's Name]</li>
+          <li><strong>Email:</strong> [User's Email]</li>
+          <li><strong>Saved Jobs:</strong> [List of Saved Jobs]</li>
+          <li><strong>Applied Jobs:</strong> [List of Applied Jobs]</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

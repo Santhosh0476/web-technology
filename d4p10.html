@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library Management System</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center py-5">Library Management System</h1>
+
+      <!-- Librarian/Admin Login Form -->
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form id="librarian-admin-login-form" onsubmit="event.preventDefault(); login();">
+            <div class="form-group">
+              <label for="emailInput"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="librarian-admin-email-input"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="passwordInput"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="librarian-admin-password-input"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+            <button
+              class="btn btn-primary btn-block"
+              id="librarian-admin-login-button"
+            >
+              Login
+            </button>
+          </form>
+
+          <div
+            class="alert alert-danger"
+            id="librarian-admin-login-message-container"
+            role="alert"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Student Registration and Login Form -->
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 class="text-center py-5">Student Login</h2>
+
+          <form id="student-login-form" onsubmit="event.preventDefault(); login();">
+            <div class="form-group">
+              <label for="emailInput"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="student-email-input"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="passwordInput"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="student-password-input"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+            <button
+              class="btn btn-primary btn-block"
+              id="student-login-button"
+            >
+              Login
+            </button>
+          </form>
+
+          <button
+            class="btn btn-secondary btn-block"
+            id="student-register-button"
+          >
+            Register
+          </button>
+
+          <div
+            class="alert alert-danger"
+            id="student-login-message-container"
+            role="alert"
+          ></div>
+
+          <!-- Student Registration Form -->
+          <div
+            class="
+              alert
+              alert-danger
+              d-none
+              student-registration-form
+              container
+            "
+          >
+            <div
+              class="
+                alert
+                alert-danger

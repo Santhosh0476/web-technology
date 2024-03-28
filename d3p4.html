@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Management System</title>
+</head>
+<body>
+    <h1>Hotel Name: H1</h1>
+    <p>Available Rooms: 4</p>
+    <p>Location: Bangalore</p>
+    <p>Rating: 5</p>
+    <p>Price Per Room: 100</p>
+    <input type="checkbox" value="H1" id="hotel1" />
+    <label for="hotel1">Confirm</label>
+
+    <h1>Hotel Name: H2</h1>
+    <p>Available Rooms: 5</p>
+    <p>Location: Bangalore</p>
+    <p>Rating: 5</p>
+    <p>Price Per Room: 200</p>
+    <input type="checkbox" value="H2" id="hotel2" />
+    <label for="hotel2">Confirm</label>
+
+    <h1>Hotel Name: H3</h1>
+    <p>Available Rooms: 6</p>
+    <p>Location: Mumbai</p>
+    <p>Rating: 3</p>
+    <p>Price Per Room: 100</p>
+    <input type="checkbox" value="H3" id="hotel3" />
+    <label for="hotel3">Confirm</label>
+
+    <button id="confirmBtn">Confirm Selected</button>
+
+    <div id="confirmedDishes"></div>
+
+    <script src="hotel.js"></script>
+</body>
+</html>
+<script>
+const confirmBtn = document.getElementById("confirmBtn");
+const confirmedDishes = document.getElementById("confirmedDishes");
+
+const hotelData = [
+    {
+        name: "H1",
+        availableRooms: 4,
+        location: "Bangalore",
+        rating: 5,
+        pricePerRoom: 100
+    },
+    {
+        name: "H2",
+        availableRooms: 5,
+        location: "Bangalore",
+        rating: 5,
+        pricePerRoom: 200
+    },
+    {
+        name: "H3",
+        availableRooms: 6,
+        location: "Mumbai",
+        rating: 3,
+        pricePerRoom: 100
+    }
+];
+
+let selectedHotels = [];
+
+confimBtn.addEventListener("click", () => {
+    selectedHotels = [];
+
+    hotelData.forEach(hotel => {
+        if (document.getElementById(hotel.name).checked) {
+            selectedHotels.push(hotel);
+        }
+    });
+
+    renderConfirmedDishes();
+});
+
+const renderConfirmedDishes = () => {
+    confirmedDishes.innerHTML = "";
+    selectedHotels.forEach(hotel => {
+        const hotelName = document.createElement("h3");
+        hotelName.textContent = hotel.name;
+        confirmedDishes.appendChild(hotelName);
+
+        const hotelLocation = document.createElement("p");
+        hotelLocation.textContent = `Location: ${hotel.location}`;
+        confirmedDishes.appendChild(hotelLocation);
+
+        const hotelRating = document.createElement("p");
+        hotelRating.textContent = `Rating: ${hotel.rating}`;
+        confirmedDishes.appendChild(hotelRating);
+
+        const hotelPricePerRoom = document.createElement("p");
+        hotelPricePerRoom.textContent = `Price Per Room: ${hotel.pricePerRoom}`;
+        confirmedDishes.appendChild(hotelPricePerRoom);
+    });
+};
+</script>

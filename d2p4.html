@@ -1,0 +1,56 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Absolute Positioning Example</title>
+ <link rel="stylesheet" type="text/css" href="Absolute.css">
+</head>
+
+<body>
+
+ <div class="container">
+  <div class="box1"></div>
+  <div class="box2"></div>
+ </div>
+
+</body>
+
+</html>
+
+<style>
+body {
+ margin: 0;
+ padding: 0;
+ font-family: Arial, sans-serif;
+}
+
+.container {
+ position: relative;
+ width: 300px;
+ height: 200px;
+ margin: 50px auto;
+ border: 1px solid #ccc;
+}
+
+.box1,
+.box2 {
+ position: absolute;
+ width: 100px;
+ height: 100px;
+ background-color: #007bff;
+}
+
+.box1 {
+ top: 50px;
+ left: 50px;
+}
+
+.box2 {
+ top: 25px;
+ left: 25px;
+ background-color: #ff6347;
+}
+</style>

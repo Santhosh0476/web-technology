@@ -1,0 +1,54 @@
+<DOCTYPE! html>
+<form action="submitRegistration.jsp" method="post">
+  <label for="firstName">First Name:</label><br>
+  <input type="text" id="firstName" name="firstName" required><br>
+  <label for="lastName">Last Name:</label><br>
+  <input type="text" id="lastName" name="lastName" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" required><br>
+  <label for="position">Position:</label><br>
+  <input type="text" id="position" name="position" required><br>
+  <label for="department">Department:</label><br>
+  <input type="text" id="department" name="department" required><br>
+  <button type="submit">Submit Registration</button><br>
+</form>
+<%@ page import="java.util.*" %>
+<%
+  String firstName = request.getParameter("firstName");
+  String lastName = request.getParameter("lastName");
+  String email = request.getParameter("email");
+  String phone = request.getParameter("phone");
+  String position = request.getParameter("position");
+  String department = request.getParameter("department");
+
+  // Store the form data in an ArrayList
+  ArrayList<String> employeeData = new ArrayList<String>();
+  employeeData.add(firstName);
+  employeeData.add(lastName);
+  employeeData.add(email);
+  employeeData.add(phone);
+  employeeData.add(position);
+  employeeData.add(department);
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Submission</title>
+</head>
+<body>
+  <h1>Registration Submission</h1>
+  <p>Thank you for submitting your registration information! Here is a summary of the data you provided:</p>
+  <ul>
+    <li>First Name: <%= employeeData.get(0) %></li>
+    <li>Last Name: <%= employeeData.get(1) %></li>
+    <li>Email: <%= employeeData.get(2) %></li>
+    <li>Phone: <%= employeeData.get(3) %></li>
+    <li>Position: <%= employeeData.get(4) %></li>
+    <li>Department: <%= employeeData.get(5) %></li>
+  </ul>
+  <p>The data has been stored in an ArrayList for further processing.</p>
+</body>
+</html>

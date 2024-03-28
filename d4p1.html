@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Effects Example</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			padding: 20px;
+		}
+
+		.animate {
+			animation: fadeIn 1s;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1 class="animate">Welcome to the Animated Effects Example</h1>
+
+	<p class="animate">
+		This HTML page uses animated effects to enhance the user experience.
+		When you refresh the page, the h1 and p elements will fade in
+		from the center of the screen.
+	</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum of Two Numbers Example</title>
+	<script>
+		function calculateSum() {
+			let num1 = parseFloat(document.getElementById("num1").value);
+			let num2 = parseFloat(document.getElementById("num2").value);
+			let sum = num1 + num2;
+			document.getElementById("result").innerHTML = "The sum is " + sum;
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculate the Sum of Two Numbers</h1>
+	<p>
+		Enter a number: <input type="text" id="num1">
+	</p>
+	<p>
+		Enter another number: <input type="text" id="num2">
+	</p>
+	<button onclick="calculateSum()">Calculate Sum</button>
+	<p id="result"></p>
+</body
