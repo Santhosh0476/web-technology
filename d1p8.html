@@ -1,0 +1,54 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JavaScript Functions</title>
+ <script src="/8. Exponent/Exponent.js"></script>
+</head>
+
+<body>
+
+<h1>Number Operations</h1>
+<label for="base">Base:</label>
+<input type="number" id="base" step="any"><br><br>
+
+<label for="exponent">Exponent:</label>
+<input type="number" id="exponent" step="any"><br><br>
+
+<label for="decimalLimit">Decimal Limit:</label>
+<input type="number" id="decimalLimit" min="0"><br><br>
+
+<button onclick="calculate()">Calculate</button><br><br>
+
+<div id="exponentialResult"></div><br>
+<div id="negativeInfinity"></div><br>
+</body>
+</html>
+
+<script>
+function calculate() {
+    // Get user input
+    var base = parseFloat(document.getElementById("base").value);
+    var exponent = parseFloat(document.getElementById("exponent").value);
+    var decimalLimit = parseInt(document.getElementById("decimalLimit").value);
+
+    // Calculate exponential value
+    var result = Math.pow(base, exponent);
+
+    // Limit the number of digits after the decimal value
+    result = result.toFixed(decimalLimit);
+
+    // Convert result to string
+    var resultAsString = result.toString();
+
+    // Return negative infinity using the number object in the HTML document
+    var negativeInfinity = Number.NEGATIVE_INFINITY;
+
+    // Display results
+    document.getElementById("exponentialResult").innerText = "Exponential Value: " + resultAsString;
+    document.getElementById("negativeInfinity").innerText = "Negative Infinity: " + negativeInfinity;
+}
+</script>
